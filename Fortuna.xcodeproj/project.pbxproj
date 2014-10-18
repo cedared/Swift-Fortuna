@@ -13,6 +13,8 @@
 		50C8A5EC19F0ECBD0052F941 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C8A5EB19F0ECBD0052F941 /* Images.xcassets */; };
 		50C8A5EF19F0ECBD0052F941 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C8A5ED19F0ECBD0052F941 /* LaunchScreen.xib */; };
 		50C8A5FB19F0ECBD0052F941 /* FortunaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C8A5FA19F0ECBD0052F941 /* FortunaTests.swift */; };
+		50F40ABF19F20D7100EEC066 /* negativeQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 50F40ABD19F20D7100EEC066 /* negativeQuotes.json */; };
+		50F40AC019F20D7100EEC066 /* positiveQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 50F40ABE19F20D7100EEC066 /* positiveQuotes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		50C8A5F419F0ECBD0052F941 /* FortunaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortunaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C8A5F919F0ECBD0052F941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C8A5FA19F0ECBD0052F941 /* FortunaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortunaTests.swift; sourceTree = "<group>"; };
+		50F40ABD19F20D7100EEC066 /* negativeQuotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = negativeQuotes.json; sourceTree = "<group>"; };
+		50F40ABE19F20D7100EEC066 /* positiveQuotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = positiveQuotes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		50C8A5E219F0ECBD0052F941 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				50F40ABD19F20D7100EEC066 /* negativeQuotes.json */,
+				50F40ABE19F20D7100EEC066 /* positiveQuotes.json */,
 				50C8A5E319F0ECBD0052F941 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -194,7 +200,9 @@
 			files = (
 				50C8A5EA19F0ECBD0052F941 /* Main.storyboard in Resources */,
 				50C8A5EF19F0ECBD0052F941 /* LaunchScreen.xib in Resources */,
+				50F40AC019F20D7100EEC066 /* positiveQuotes.json in Resources */,
 				50C8A5EC19F0ECBD0052F941 /* Images.xcassets in Resources */,
+				50F40ABF19F20D7100EEC066 /* negativeQuotes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fortuna/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -347,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fortuna/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -405,6 +415,7 @@
 				50C8A60019F0ECBD0052F941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50C8A60119F0ECBD0052F941 /* Build configuration list for PBXNativeTarget "FortunaTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +424,7 @@
 				50C8A60319F0ECBD0052F941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

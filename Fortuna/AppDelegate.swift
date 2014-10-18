@@ -9,16 +9,47 @@
 import UIKit
 
 @UIApplicationMain
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var positiveQuotes: [String]!
+    var negativeQuotes: [String]!
+    
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        return true
-    }
+        
+        // TODO: load quotations from JSON files
+        positiveQuotes = loadQuotes("positiveQuotes")
+        negativeQuotes = loadQuotes("negativeQuotes")
+        
 
+        // assertions to make sure that the quotations are loaded
+        assert(positiveQuotes.count > 0, "Should load positive quotes")
+        assert(negativeQuotes.count > 0, "Should load negative quotes")
+        
+        return true
+    
+        }
+    
+    func loadQuotes(filename: String) -> [String]{
+        let filepath = NSBundle.mainBundle().pathForResource(filename, ofType: "json")
+        assert(filepath != nil, "File doesn't exist")
+        
+        let data = NSData(contentsOfFile: filepath!)
+        assert(data != nil, "Failed to read \(filename)")
+        
+        var err :NSError?
+        let quotes = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.allZeros, error: &err) as [String]
+        assert(err == nil, "Error prasing json: \(err)")
+        
+        return quotes
+        
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
